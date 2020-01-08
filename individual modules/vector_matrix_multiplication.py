@@ -1,12 +1,21 @@
 def VM_multiplication(vector, matrix):
     for element in range(len(vector)):
-        for collum in range(len(matrix[element])):
-            matrix[element][collum] = matrix[element][collum]*vector[element]
+        try:
+            for collum in range(len(matrix[element])):
+                matrix[element][collum] = matrix[element][collum]*vector[element]
+        except IndexError:
+            ""
 
     for new in range(len(vector)):
         vector[new] = 0
-        for col in range(len(matrix)):
-            vector[new] += matrix[col][new]
+        try:
+            for col in range(len(matrix)):
+                vector[new] += matrix[col][new]
+        except IndexError:
+            ""
 
     return vector
+
+
+
 
