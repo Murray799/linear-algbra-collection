@@ -26,3 +26,12 @@ def VM_multiplication(vector, matrix):
             ""
 
     return vector
+
+def vector_addition(vector_1, vector_2):
+    for element in range(len(vector_2)):
+        try:
+            vector_1[element] += vector_2[element]
+        except IndexError:
+            vector_1.append(vector_2[element])
+
+    return vector_1
