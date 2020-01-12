@@ -1,8 +1,8 @@
 def VM_multiplication(vector, matrix):
     for element in range(len(vector)):
         try:
-            for collum in range(len(matrix[element])):
-                matrix[element][collum] = matrix[element][collum]*vector[element]
+            for column in range(len(matrix[element])):
+                matrix[element][column] = matrix[element][column]*vector[element]
         except IndexError:
             ""
 
