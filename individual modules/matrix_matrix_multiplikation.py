@@ -1,3 +1,6 @@
+# not finished
+
+----------------------------------------
 def MM_multiplication(matrix_1, matrix_2):
     count = 0
     for vector in matrix_1:
