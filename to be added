@@ -1,1 +1,11 @@
+-> invert matrix [easy]
 
+-> symmetric matrix [easy #requires invert matrix]
+
+-> solving system of linear equations [hard]
+
+-> square matrix [hard #requires eigen stuff]
+
+-> finde eigen value [hard #requires determinant]
+
+-> finde eiegen value [hard #requires eigen value]
