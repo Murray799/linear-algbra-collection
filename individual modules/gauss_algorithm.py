@@ -1,16 +1,15 @@
-def normalise(M):
-    new_M = []
-    for element in range(len(M)):
-        new_M.append([])
-        for element2 in range(len(M)):
-            new_M[element].append(M[element2][element])
-    return new_M
-
-
-def rowMod(M, i, j, x):
-    M[i] = [a + x * b for a,b in zip(M[i], M[j])]
-
 def rowEchelon(M):
+    def normalise(M):
+        new_M = []
+        for element in range(len(M)):
+            new_M.append([])
+            for element2 in range(len(M)):
+                new_M[element].append(M[element2][element])
+        return new_M
+
+    def rowMod(M, i, j, x):
+        M[i] = [a + x * b for a, b in zip(M[i], M[j])]
+
     M = normalise(M)
     row, col = 0, 0
     rows, cols = len(M), len(M[0])
@@ -34,5 +33,3 @@ def rowEchelon(M):
         col += 1
 
     return normalise(M)
-
-
