@@ -35,6 +35,7 @@ def determinant(M):
             col += 1
 
         return normalise(M)
+    #to compute the determinant we just bring the matrix in to echelon form and then multiply all diagunal values 
 
     num = 1
     new_M = rowEchelon(M)
