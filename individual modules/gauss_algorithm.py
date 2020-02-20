@@ -1,5 +1,6 @@
 def rowEchelon(M):
     def normalise(M):
+        # normalise is used to translate between deifrent way of inputing a matrix
         new_M = []
         for element in range(len(M)):
             new_M.append([])
