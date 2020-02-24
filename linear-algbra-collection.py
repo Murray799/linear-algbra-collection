@@ -95,34 +95,6 @@ def determinant(M):
                 new_M[element].append(M[element2][element])
         return new_M
 
-    def rowMod(M, i, j, x):
-        M[i] = [a + x * b for a, b in zip(M[i], M[j])]
-
-    def rowEchelon(M):
-        M = normalise(M)
-        row, col = 0, 0
-        rows, cols = len(M), len(M[0])
-        while row < rows and col < cols:
-            if M[row][col] == 0:
-                for r in range(row + 1, rows):
-                    if M[r][col] != 0:
-                        rowMod(M, row, r, 1)
-                        break
-
-            if M[row][col] == 0:
-                col += 1
-                continue
-            pivot = M[row][col]
-
-            for r in range(row + 1, rows):
-                if M[r][col] != 0:
-                    rowMod(M, r, row, -M[r][col] / pivot)
-
-            row += 1
-            col += 1
-
-        return normalise(M)
-
     num = 1
     new_M = rowEchelon(M)
     for element in range(len(M)):
@@ -130,21 +102,6 @@ def determinant(M):
     return num
 
 def half_rotation(matrix):
-
-    def MM_multiplication(matrix_1, matrix_2):
-        end_matrix = []
-        for element in range(len(matrix_1)):
-            end_matrix.append([])
-            for no_use in matrix_1:
-                end_matrix[element].append(0)
-
-        for i in range(len(matrix_1)):
-            for j in range(len(matrix_1)):
-                for k in range(len(matrix_1)):
-                    end_matrix[i][j] += matrix_1[i][k] * matrix_2[k][j]
-
-        return end_matrix
-
     new_ = []
     for c in range(len(matrix)):
         new_.append([])
@@ -156,3 +113,34 @@ def half_rotation(matrix):
         new_[col][count*-1] = 1
 
     return MM_multiplication(matrix, new_)
+
+def solve_eq(matrix, result):
+    def abs(lis):
+        if lis < 0:
+            lis = lis*-1
+        return lis
+
+
+    for k in range(len(result)):
+        if abs(matrix[k][k]) < 0:
+            for i in range(k+1, len(result)):
+                if abs(matrix[i][k]) > abs(matrix[k][k]):
+                    for j in range(k,len(result)):
+                        matrix[k][j], matrix[i][j] = matrix[i][j], matrix[k][j]
+                    result[k], result[i] = result[i], result[k]
+                    break
+        pivot = matrix[k][k]
+        for j in range(k, len(result)):
+            matrix[k][j] /= pivot
+        result[k] /= pivot
+
+        for i in range(len(result)):
+            if i == k or matrix[i][k] == 0:
+                continue
+            factore = matrix[i][k]
+            for j in range(k, len(result)):
+                matrix[i][j] -= factore * matrix[k][j]
+            result[i] -= factore*result[k]
+    return matrix, result
+
+print(solve_eq([[2,2],[2,1]],[6,5]))
