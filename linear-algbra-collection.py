@@ -143,9 +143,6 @@ def solve_eq(matrix, result):
             result[i] -= factore*result[k]
     return matrix, result
 
-print(solve_eq([[2,2],[2,1]],[6,5]))
-
-
 def cross_product(vector_1, vector_2):
     new_vector = [1, 1, 1]
 
