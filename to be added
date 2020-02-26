@@ -1,10 +1,6 @@
--> solving system of linear equations [hard]
-
 -> square matrix [hard #requires eigen stuff]
 i mean using a more efficent methode then just MM_mult over and over aigan 
 
 -> finde eigen value [hard #requires determinant]
 
 -> finde eiegen value [hard #requires eigen value]
-
--> cross product [easy]
