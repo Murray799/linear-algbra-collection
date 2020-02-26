@@ -1,6 +1,6 @@
 -> square matrix [hard #requires eigen stuff]
 i mean using a more efficient method than just MM_mult over and over aigan
 
--> finde eigen value [hard requires determinant]
+-> finde eigen value [hard / requires determinant]
 
--> finde eiegen value [hard requires eigen value]
+-> finde eiegen value [hard / requires eigen value]
