@@ -151,3 +151,12 @@ def cross_product(vector_1, vector_2):
     new_vector[2] *= vector_1[0]*vector_2[1] - vector_1[1]*vector_2[0]
 
     return new_vector
+
+def absolute_value(vector):
+    import math
+    val = 0
+
+    for element in vector:
+        val += element**2
+
+    return math.sqrt(val)
