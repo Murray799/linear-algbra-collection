@@ -4,3 +4,5 @@ i mean using a more efficient method than just MM_mult over and over aigan
 -> finde eigen value [hard / requires determinant]
 
 -> finde eiegen value [hard / requires eigen value]
+
+-> finde positional vector [easy]
