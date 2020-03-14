@@ -163,3 +163,9 @@ def absolute_value(vector):
 
 def angle(vector_1, vector_2):
     return math.acos(dot_product(vector_2,vector_1)/absolute_value(vector_2)*absolute_value(vector_1))
+
+def finde_position_vector(point_1, point_2):
+    for element in range(len(point_1)):
+        point_2[element] = point_2[element] - point_1[element]
+
+    return point_2
