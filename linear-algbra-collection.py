@@ -1,4 +1,14 @@
 import math
+def eigenvalue_2x2(matrix):
+
+    result1 = (matrix[0][0] + matrix[1][1]) / 2 + math.sqrt(
+        ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
+
+    result2 = (matrix[0][0] + matrix[1][1]) / 2 - math.sqrt(
+        ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
+
+    return result1, result2
+
 def dot_product(vector_1, vector_2):
     dot_product = 0
     for index in range(len(vector_1)):
