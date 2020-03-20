@@ -9,4 +9,3 @@ def eigenvalue_2x2(matrix):
 
     return result1, result2
 
-print(eigenvalue_2x2([[1,2],[4,3]]))
