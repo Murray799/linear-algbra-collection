@@ -179,3 +179,10 @@ def finde_position_vector(point_1, point_2):
         point_2[element] = point_2[element] - point_1[element]
 
     return point_2
+
+def eigen_vectore_2x2(matrix):
+    matrix[0,0] -= eigenvalue_2x2(matrix)
+    matrix[1,1] -= eigenvalue_2x2(matrix)
+
+
+    return solve_eq(matrix, [0,0])[1]
