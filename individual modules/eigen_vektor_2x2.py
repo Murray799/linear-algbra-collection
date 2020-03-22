@@ -41,5 +41,5 @@ def eigen_vectore_2x2(matrix):
                 result[i] -= factore * result[k]
         return matrix, result
 
-    return solve_eq(matrix, [0,0])
+    return solve_eq(matrix, [0,0])[1]
 
