@@ -1,4 +1,4 @@
-def eigen_vectore_2c2(matrix):
+def eigen_vectore_2x2(matrix):
     def eigenvalue_2x2(matrix):
         import math
 
