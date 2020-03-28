@@ -1,5 +1,5 @@
 -> square matrix [hard #requires eigen stuff]
-i mean using a more efficient method than just MM_mult over and over aigan
+i mean using a more efficient method than just MM_mult over and over again
 
 -> finde eigen value [hard / requires determinant]
 
