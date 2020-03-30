@@ -1,4 +1,5 @@
 def angle(vector_1, vector_2):
+    #uses dotproduct = |vector_1|*|vector_2|*cos(a)
     import math
     def dot_product(vector_1, vector_2):
         dot_product = 0
