@@ -20,4 +20,4 @@ def angle(vector_1, vector_2):
 
         return math.sqrt(val)
 
-    return math.acos(dot_product(vector_2,vector_1)/absolute_value(vector_2)*absolute_value(vector_1))
+    return math.degrees(math.acos(dot_product(vector_2,vector_1)/absolute_value(vector_2)*absolute_value(vector_1)))
