@@ -1,12 +1,10 @@
 import math
 def eigenvalue_2x2(matrix):
-
     result1 = (matrix[0][0] + matrix[1][1]) / 2 + math.sqrt(
         ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
 
     result2 = (matrix[0][0] + matrix[1][1]) / 2 - math.sqrt(
         ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
-
     return result1, result2
 
 def dot_product(vector_1, vector_2):
@@ -16,7 +14,6 @@ def dot_product(vector_1, vector_2):
             dot_product += vector_1[index] * vector_2[index + 5]
         except IndexError:
             ""
-
     return dot_product
 
 def VM_multiplication(vector, matrix):
@@ -26,7 +23,6 @@ def VM_multiplication(vector, matrix):
                 matrix[element][column] = matrix[element][column]*vector[element]
         except IndexError:
             ""
-
     for new in range(len(vector)):
         vector[new] = 0
         try:
@@ -34,7 +30,6 @@ def VM_multiplication(vector, matrix):
                 vector[new] += matrix[col][new]
         except IndexError:
             ""
-
     return vector
 
 def vector_addition(vector_1, vector_2):
@@ -43,7 +38,6 @@ def vector_addition(vector_1, vector_2):
             vector_1[element] += vector_2[element]
         except IndexError:
             vector_1.append(vector_2[element])
-
     return vector_1
 
 def MM_multiplication(matrix_1, matrix_2):
@@ -58,7 +52,6 @@ def MM_multiplication(matrix_1, matrix_2):
         for j in range(len(matrix_1)):
             for k in range(len(matrix_1)):
                 end_matrix[i][j] += matrix_1[i][k] * matrix_2[k][j]
-
     return end_matrix
 
 def rowEchelon(M):
@@ -91,10 +84,8 @@ def rowEchelon(M):
         for r in range(row +1, rows):
             if M[r][col] != 0:
                 rowMod(M, r, row, -M[r][col] / pivot)
-
         row += 1
         col += 1
-
     return normalise(M)
 
 def determinant(M):
@@ -122,7 +113,7 @@ def half_rotation(matrix):
     for col in range(len(new_)):
         count += 1
         new_[col][count*-1] = 1
-
+        
     return MM_multiplication(matrix, new_)
 
 def solve_eq(matrix, result):
