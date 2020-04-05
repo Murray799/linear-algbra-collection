@@ -5,6 +5,7 @@ def eigenvalue_2x2(matrix):
 
     result2 = (matrix[0][0] + matrix[1][1]) / 2 - math.sqrt(
         ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
+    
     return result1, result2
 
 def dot_product(vector_1, vector_2):
@@ -14,6 +15,7 @@ def dot_product(vector_1, vector_2):
             dot_product += vector_1[index] * vector_2[index + 5]
         except IndexError:
             ""
+    
     return dot_product
 
 def VM_multiplication(vector, matrix):
@@ -30,6 +32,7 @@ def VM_multiplication(vector, matrix):
                 vector[new] += matrix[col][new]
         except IndexError:
             ""
+    
     return vector
 
 def vector_addition(vector_1, vector_2):
@@ -38,6 +41,7 @@ def vector_addition(vector_1, vector_2):
             vector_1[element] += vector_2[element]
         except IndexError:
             vector_1.append(vector_2[element])
+    
     return vector_1
 
 def MM_multiplication(matrix_1, matrix_2):
@@ -52,6 +56,7 @@ def MM_multiplication(matrix_1, matrix_2):
         for j in range(len(matrix_1)):
             for k in range(len(matrix_1)):
                 end_matrix[i][j] += matrix_1[i][k] * matrix_2[k][j]
+    
     return end_matrix
 
 def rowEchelon(M):
@@ -61,6 +66,7 @@ def rowEchelon(M):
             new_M.append([])
             for element2 in range(len(M)):
                 new_M[element].append(M[element2][element])
+        
         return new_M
 
     def rowMod(M, i, j, x):
@@ -86,6 +92,7 @@ def rowEchelon(M):
                 rowMod(M, r, row, -M[r][col] / pivot)
         row += 1
         col += 1
+    
     return normalise(M)
 
 def determinant(M):
@@ -95,12 +102,14 @@ def determinant(M):
             new_M.append([])
             for element2 in range(len(M)):
                 new_M[element].append(M[element2][element])
+        
         return new_M
 
     num = 1
     new_M = rowEchelon(M)
     for element in range(len(M)):
         num = num*new_M[element][element]
+    
     return num
 
 def half_rotation(matrix):
@@ -120,6 +129,7 @@ def solve_eq(matrix, result):
     def abs(lis):
         if lis < 0:
             lis = lis*-1
+        
         return lis
 
 
@@ -143,6 +153,7 @@ def solve_eq(matrix, result):
             for j in range(k, len(result)):
                 matrix[i][j] -= factore * matrix[k][j]
             result[i] -= factore*result[k]
+    
     return matrix, result
 
 def cross_product(vector_1, vector_2):
@@ -175,6 +186,5 @@ def finde_position_vector(point_1, point_2):
 def eigen_vectore_2x2(matrix):
     matrix[0,0] -= eigenvalue_2x2(matrix)
     matrix[1,1] -= eigenvalue_2x2(matrix)
-
 
     return solve_eq(matrix, [0,0])[1]
