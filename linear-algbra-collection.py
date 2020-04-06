@@ -188,3 +188,7 @@ def eigen_vectore_2x2(matrix):
     matrix[1,1] -= eigenvalue_2x2(matrix)
 
     return solve_eq(matrix, [0,0])[1]
+
+def translation(vectore, matrix):
+   new_result = VM_multiplication(vectore, matrix)
+    return new_result
