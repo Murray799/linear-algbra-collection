@@ -6,7 +6,6 @@ def translation(vectore, matrix):
                     matrix[element][collum] = matrix[element][collum] * vector[element]
             except IndexError:
                 ""
-
         for new in range(len(vector)):
             vector[new] = 0
             try:
