@@ -10,6 +10,7 @@ def determinant(M):
 
     def rowMod(M, i, j, x):
         M[i] = [a + x * b for a, b in zip(M[i], M[j])]
+    # modefies matrix element   
 
     def rowEchelon(M):
         M = normalise(M)
