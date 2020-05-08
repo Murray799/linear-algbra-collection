@@ -43,5 +43,6 @@ def determinant(M):
     new_M = rowEchelon(M)
     for element in range(len(M)):
         num = num*new_M[element][element]
+    # multiplies elements diagonally
     return num
 
