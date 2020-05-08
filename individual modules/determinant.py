@@ -7,6 +7,7 @@ def determinant(M):
             for element2 in range(len(M)):
                 new_M[element].append(M[element2][element])
         return new_M
+    # changes Matrix shape 
 
     def rowMod(M, i, j, x):
         M[i] = [a + x * b for a, b in zip(M[i], M[j])]
