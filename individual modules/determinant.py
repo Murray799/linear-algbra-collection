@@ -5,7 +5,7 @@ def determinant(M):
         # create new Matrix
         for element in range(len(M)):
             new_M.append([])
-            
+            # appand new sub vectore 
             for element2 in range(len(M)):
                 new_M[element].append(M[element2][element])
         return new_M
