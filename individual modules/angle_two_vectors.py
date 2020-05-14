@@ -4,6 +4,7 @@ def angle(vector_1, vector_2):
     def dot_product(vector_1, vector_2):
         dot_product = 0
         for index in range(len(vector_1)):
+            # interrates through both vectore at the same time
             try:
                 dot_product += vector_1[index] * vector_2[index]
             except IndexError:
