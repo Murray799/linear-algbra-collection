@@ -1,5 +1,5 @@
 def absolute_value(vector):
-    import math
+    import sqrt from math
     # impor the sqrt function from standart math module
     val = 0
     # defines variable
