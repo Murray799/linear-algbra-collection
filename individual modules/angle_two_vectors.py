@@ -12,7 +12,6 @@ def angle(vector_1, vector_2):
         return dot_product
 
     def absolute_value(vector):
-        import math
         val = 0
 
         for element in vector:
