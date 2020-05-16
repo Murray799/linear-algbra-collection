@@ -1,6 +1,6 @@
 def angle(vector_1, vector_2):
     #uses dotproduct = |vector_1|*|vector_2|*cos(a)
-    import math
+    from math import sqrt
     def dot_product(vector_1, vector_2):
         dot_product = 0
         for index in range(len(vector_1)):
