@@ -19,6 +19,6 @@ def angle(vector_1, vector_2):
             val += element ** 2
             # takes each value form vectore square a´nd adds them
 
-        return math.sqrt(val)
+        return sqrt(val)
 
     return math.degrees(math.acos(dot_product(vector_2,vector_1)/absolute_value(vector_2)*absolute_value(vector_1)))
