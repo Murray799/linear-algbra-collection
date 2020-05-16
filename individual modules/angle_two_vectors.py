@@ -15,7 +15,6 @@ def angle(vector_1, vector_2):
 
     def absolute_value(vector):
         val = 0
-
         for element in vector:
             val += element ** 2
 
