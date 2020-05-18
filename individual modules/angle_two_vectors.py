@@ -20,5 +20,5 @@ def angle(vector_1, vector_2):
             # takes each value form vectore square a´nd adds them
 
         return sqrt(val)
-    # uses fromula from line 2  
+    # uses fromula from line 2 | result in arch length turned to degrees 
     return math.degrees(math.acos(dot_product(vector_2,vector_1)/absolute_value(vector_2)*absolute_value(vector_1)))
