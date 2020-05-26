@@ -23,6 +23,7 @@ def determinant(M):
         rows, cols = len(M), len(M[0])
         # define size of matrix 
         while row < rows and col < cols:
+            # starts while loop witch continues until matrix in echelon form 
             if M[row][col] == 0:
                 for r in range(row + 1, rows):
                     if M[r][col] != 0:
