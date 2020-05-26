@@ -18,6 +18,7 @@ def determinant(M):
 
     def rowEchelon(M):
         M = normalise(M)
+        # uses noramlise to make matrix fit the algorithem 
         row, col = 0, 0
         rows, cols = len(M), len(M[0])
         while row < rows and col < cols:
