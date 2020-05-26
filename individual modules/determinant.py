@@ -21,6 +21,7 @@ def determinant(M):
         # uses noramlise to make matrix fit the algorithem 
         row, col = 0, 0
         rows, cols = len(M), len(M[0])
+        # define size of matrix 
         while row < rows and col < cols:
             if M[row][col] == 0:
                 for r in range(row + 1, rows):
