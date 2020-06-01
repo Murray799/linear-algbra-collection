@@ -4,6 +4,6 @@
 
 -> square matrix [hard #requires eigen stuff]
 
--> finde eigen value [hard / requires determinant]
+--> finde eigen value [hard / requires determinant]
 
 -> finde eiegen value [hard / requires eigen value]
