@@ -8,7 +8,9 @@ def VM_multiplication(vector, matrix):
             "incorrect dimensions please check input"
 
     for new in range(len(vector)):
+        # empties vector 
         vector[new] = 0
+        # adds matrix columns together and then adds to vector
         try:
             for col in range(len(matrix)):
                 vector[new] += matrix[col][new]
