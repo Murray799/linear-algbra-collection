@@ -4,6 +4,6 @@ def dot_product(vector_1, vector_2):
         try:
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
-            ""
+            "incorrect dimensions please check input"
 
     return dot_product
