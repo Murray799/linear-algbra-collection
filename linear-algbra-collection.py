@@ -18,7 +18,7 @@ def dot_product(vector_1, vector_2):
         try:
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
-            ""
+            "incorrect dimensions please check input"
     
     return dot_product
 
@@ -28,14 +28,14 @@ def VM_multiplication(vector, matrix):
             for column in range(len(matrix[element])):
                 matrix[element][column] = matrix[element][column]*vector[element]
         except IndexError:
-            ""
+            "incorrect dimensions please check input"
     for new in range(len(vector)):
         vector[new] = 0
         try:
             for col in range(len(matrix)):
                 vector[new] += matrix[col][new]
         except IndexError:
-            ""
+            "incorrect dimensions please check input"
     
     return vector
 
