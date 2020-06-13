@@ -16,6 +16,7 @@ def dot_product(vector_1, vector_2):
     # defines variable
     dot_product = 0
     for index in range(len(vector_1)):
+        # goes throug each element in vector length 
         try:
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
