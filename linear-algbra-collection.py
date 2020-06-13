@@ -13,6 +13,7 @@ def eigenvalue_2x2(matrix):
     return result1, result2
 
 def dot_product(vector_1, vector_2):
+    # defines variable
     dot_product = 0
     for index in range(len(vector_1)):
         try:
