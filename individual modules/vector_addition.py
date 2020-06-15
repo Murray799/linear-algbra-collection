@@ -5,6 +5,7 @@ def vector_addition(vector_1, vector_2):
             vector_1[element] += vector_2[element]
         except IndexError:
             vector_1.append(vector_2[element])
+        # excepts if Vectors have diffrent length
 
     return vector_1
 
