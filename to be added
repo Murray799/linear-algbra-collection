@@ -2,10 +2,11 @@
 
 -> finde invers matrix 
 
---> midpoint finder  
-
 -> square matrix [hard #requires eigen stuff]
 
 --> finde eigen value [hard / requires determinant]
 
 -> finde eiegen vector [hard / requires eigen value]
+
+important
+fix web-app-tool final so that it works for indefinite arguments > 1
