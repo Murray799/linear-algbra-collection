@@ -6,7 +6,9 @@ def mid(lis_vec):
     for vec_row in range(len(lis_vec[0])):
         for element in lis_vec:
             add += element[vec_row]
+            # adds each element of vector
         new_vec.append(add / len(vec_row))
+        # divides by number of vectors 
         add = 0
 
     return new_vec
