@@ -13,7 +13,6 @@ def translation(vectore, matrix):
                     vector[new] += matrix[col][new]
             except IndexError:
                 ""
-
         return vector
 
     return VM_multiplication(vectore, matrix)
