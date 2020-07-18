@@ -1,7 +1,10 @@
 --> translation between base vectors
 
--> square matrix [hard #requires eigen stuff]
+-> square matrix 
+[hard #requires eigen stuff]
 
---> finde eigen value [hard / requires determinant]
+--> finde eigen value 
+[hard / requires determinant]
 
--> finde eiegen vector [hard / requires eigen value]
+-> finde eiegen vector 
+[hard / requires eigen value]
