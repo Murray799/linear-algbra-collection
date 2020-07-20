@@ -4,7 +4,6 @@ def string_matrix(mis):
     # removes unnecessary elements from string
     mis = mis.split(";")
     # splits it into individual vector parts
-
     for element in range(len(mis)):
         mis[element] = string_vector(mis[element])
         # turns string in to list
