@@ -22,5 +22,4 @@ def final_step(st):
         new_st.insert(0, float(st[0]))
     # checks whether it is matrix, vector or num
     # and inserts them in the correct position so that num , vector , matrix
-
     return new_st[0], new_st[1]
