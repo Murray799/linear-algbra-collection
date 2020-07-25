@@ -8,7 +8,6 @@ def eigenvalue_2x2(matrix):
 
     result2 = (matrix[0][0] + matrix[1][1]) / 2 - math.sqrt(
         ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
-    
     # result is two possible solutions
     return result1, result2
 
@@ -22,8 +21,6 @@ def dot_product(vector_1, vector_2):
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
             # catches Index error if one vector is longer then the other 
-            "incorrect dimensions please check input"
-    
     return dot_product
 
 def VM_multiplication(vector, matrix):
