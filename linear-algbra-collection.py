@@ -123,7 +123,9 @@ def half_rotation(matrix):
         new_.append([])
         for no_use in matrix:
             new_[c].append(0)
+    
     count = 0
+    
     for col in range(len(new_)):
         count += 1
         new_[col][count*-1] = 1
@@ -185,7 +187,7 @@ def angle(vector_1, vector_2):
 def finde_position_vector(point_1, point_2):
     for element in range(len(point_1)):
         point_2[element] = point_2[element] - point_1[element]
-
+    
     return point_2
 
 def eigen_vectore_2x2(matrix):
