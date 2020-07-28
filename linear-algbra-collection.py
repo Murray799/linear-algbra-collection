@@ -45,7 +45,9 @@ def VM_multiplication(vector, matrix):
     return vector
 
 def vector_addition(vector_1, vector_2):
+    # takes in two vectors and uses for loop to itrate ove them 
     for element in range(len(vector_2)):
+        # then adds elememnts together 
         vector_1[element] += vector_2[element]
     
     return vector_1
