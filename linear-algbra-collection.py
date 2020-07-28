@@ -40,6 +40,7 @@ def VM_multiplication(vector, matrix):
                 vector[new] += matrix[col][new]
         except IndexError:
             "incorrect dimensions please check input"
+            #checks for index error and excepts it 
     
     return vector
 
