@@ -1,9 +1,0 @@
---> translation between base vectors
-
--> finde invers matrix 
-
--> square matrix [hard #requires eigen stuff]
-
---> finde eigen value [hard / requires determinant]
-
--> finde eiegen vector [hard / requires eigen value]

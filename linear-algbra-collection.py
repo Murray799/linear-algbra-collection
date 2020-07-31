@@ -8,7 +8,6 @@ def eigenvalue_2x2(matrix):
 
     result2 = (matrix[0][0] + matrix[1][1]) / 2 - math.sqrt(
         ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
-    
     # result is two possible solutions
     return result1, result2
 
@@ -22,33 +21,34 @@ def dot_product(vector_1, vector_2):
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
             # catches Index error if one vector is longer then the other 
-            "incorrect dimensions please check input"
-    
     return dot_product
 
 def VM_multiplication(vector, matrix):
     for element in range(len(vector)):
+    # goes through the matrix and then multiplies with correct vector element
         try:
             for column in range(len(matrix[element])):
                 matrix[element][column] = matrix[element][column]*vector[element]
         except IndexError:
             "incorrect dimensions please check input"
     for new in range(len(vector)):
+        # empties vector
         vector[new] = 0
+    # adds matrix columns together and then adds to vector
         try:
             for col in range(len(matrix)):
                 vector[new] += matrix[col][new]
         except IndexError:
             "incorrect dimensions please check input"
+            #checks for index error and excepts it 
     
     return vector
 
 def vector_addition(vector_1, vector_2):
+    # takes in two vectors and uses for loop to itrate ove them 
     for element in range(len(vector_2)):
-        try:
-            vector_1[element] += vector_2[element]
-        except IndexError:
-            vector_1.append(vector_2[element])
+        # then adds elememnts together 
+        vector_1[element] += vector_2[element]
     
     return vector_1
 
@@ -126,7 +126,9 @@ def half_rotation(matrix):
         new_.append([])
         for no_use in matrix:
             new_[c].append(0)
+    
     count = 0
+    
     for col in range(len(new_)):
         count += 1
         new_[col][count*-1] = 1
@@ -188,7 +190,7 @@ def angle(vector_1, vector_2):
 def finde_position_vector(point_1, point_2):
     for element in range(len(point_1)):
         point_2[element] = point_2[element] - point_1[element]
-
+    
     return point_2
 
 def eigen_vectore_2x2(matrix):
