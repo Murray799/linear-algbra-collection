@@ -15,7 +15,6 @@ def string_matrix(mis):
     # removes unnecessary elements from string
     mis = mis.split(";")
     # splits it into individual vector parts
-
     for element in range(len(mis)):
         mis[element] = string_vector(mis[element])
         # turns string in to list
@@ -25,7 +24,6 @@ def final_step(st):
     st = st.split("|")
     new_st = []
     # defines new list and splits the two inputs
-
     if "([" in st[0]:
         new_st.append(string_matrix(st[0]))
     elif "[" in st[0]:
