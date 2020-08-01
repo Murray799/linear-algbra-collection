@@ -9,6 +9,7 @@ def eigen_vectore_2x2(matrix):
             ((matrix[0][0] + matrix[1][1]) / 2) ** 2 - matrix[0][0] * matrix[1][1])
 
         return result1, result2
+    # first solves for eigen Values 
 
     matrix[0,0] -= eigenvalue_2x2(matrix)
     matrix[1,1] -= eigenvalue_2x2(matrix)
