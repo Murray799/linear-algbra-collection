@@ -13,6 +13,7 @@ def eigen_vectore_2x2(matrix):
 
     matrix[0,0] -= eigenvalue_2x2(matrix)
     matrix[1,1] -= eigenvalue_2x2(matrix)
+    # creates matrix with eigen Values 
 
     def solve_eq(matrix, result):
         def abs(lis):
@@ -41,6 +42,7 @@ def eigen_vectore_2x2(matrix):
                     matrix[i][j] -= factore * matrix[k][j]
                 result[i] -= factore * result[k]
         return matrix, result
+    #this solves for zero vector result 
 
     return solve_eq(matrix, [0,0])[1]
 
