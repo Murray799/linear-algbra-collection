@@ -215,6 +215,7 @@ def mid_vector(lis_vec):
         for element in lis_vec:
             add += element[vec_row]
         new_vec.append(add / len(vec_row))
+        # divides by amount of vector
         add = 0
 
     return new_vec
