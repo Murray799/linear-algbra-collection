@@ -30,7 +30,7 @@ def VM_multiplication(vector, matrix):
             for column in range(len(matrix[element])):
                 matrix[element][column] = matrix[element][column]*vector[element]
         except IndexError:
-            "incorrect dimensions please check input"
+           print("incorrect dimensions please check your input")
     for new in range(len(vector)):
         # empties vector
         vector[new] = 0
