@@ -20,6 +20,7 @@ def dot_product(vector_1, vector_2):
             # multiplies and adds to var
             dot_product += vector_1[index] * vector_2[index]
         except IndexError:
+            print("incorrect dimensions please check your input")
             # catches Index error if one vector is longer then the other 
     return dot_product
 
