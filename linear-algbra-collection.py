@@ -39,7 +39,7 @@ def VM_multiplication(vector, matrix):
             for col in range(len(matrix)):
                 vector[new] += matrix[col][new]
         except IndexError:
-            "incorrect dimensions please check input"
+            print("incorrect dimensions please check your input")
             #checks for index error and excepts it 
     
     return vector
